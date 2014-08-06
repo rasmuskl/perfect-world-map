@@ -30,7 +30,7 @@
       "id": "ne2hrlcsrwdr",
       "class": "",
       "Datasource": {
-        "file": "C:\\Users\\rasmuskl\\Downloads\\mapdata\\NE2_HR_LC_SR_W_DR\\NE2_HR_LC_SR_W_DR.tif"
+        "file": "../../../data/raster/NE2_HR_LC_SR_W.tif"
       },
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
