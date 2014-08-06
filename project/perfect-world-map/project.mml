@@ -1,0 +1,155 @@
+{
+  "bounds": [
+    -180,
+    -85.05112877980659,
+    180,
+    85.05112877980659
+  ],
+  "center": [
+    0,
+    0,
+    2
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        85.051
+      ],
+      "id": "ne2hrlcsrwdr",
+      "class": "",
+      "Datasource": {
+        "file": "C:\\Users\\rasmuskl\\Downloads\\mapdata\\NE2_HR_LC_SR_W_DR\\NE2_HR_LC_SR_W_DR.tif"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "ne2hrlcsrwdr"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.6341006530001
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "countries",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "-180,-90,180,83.6341006530001",
+        "host": "localhost",
+        "user": "postgres",
+        "dbname": "map",
+        "id": "countries",
+        "project": "x",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "countries",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "countries"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.6341006530001
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "coastline",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "-180,-85.2219377579999,180,83.6341006530001",
+        "host": "localhost",
+        "user": "postgres",
+        "dbname": "map"
+      },
+      "id": "coastline",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "coastline"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        179.999897088946,
+        85.051
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "geography_marine_polys",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "-180,-85.1920606424346,179.999897088946,90",
+        "host": "localhost",
+        "user": "postgres",
+        "dbname": "map"
+      },
+      "id": "geographymarinepolys",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "geographymarinepolys"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        -179.589978883969,
+        -85.051,
+        179.38330358817,
+        82.4833231803594
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "populated_places",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "-179.589978883969,-89.9999998143873,179.38330358817,82.4833231803594",
+        "host": "localhost",
+        "user": "postgres",
+        "dbname": "map",
+        "id": "populated_places",
+        "project": "x",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "populated_places",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "populated_places"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "x",
+  "description": ""
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/jquery/jquery-1.9.1.js" ></script>
+    <script type="text/javascript">
+      $(function() {
+        var elmStyle = $("#style");
+        var elmNumber = $("#number");
+        var elmResult = $("#result");
+
+        function update() {
+
+          var zoom = 5;
+          elmResult.val('');
+
+          var number = elmNumber.val();
+          var style = elmStyle.val();
+
+          var html = '';
+          var num = parseFloat(number); 
+
+          if (isNaN(num)) {
+            return;
+          }
+
+          var mult = Math.pow(2, 5 - zoom);
+          html += '[zoom=' + 5 + '] { ' + style + ': ' + num * mult + '; }'+ '     ';
+
+          for (var i=0;i<20;i++) {
+            var mult = Math.pow(2, i - zoom);
+            html += '[zoom=' + i + '] { ' + style + ': ' + num * mult + '; }'+ ' ';
+          }
+
+          elmResult.val(html);
+           
+        }
+
+      elmStyle.on('keyup', update);
+      elmNumber.on('keyup', update);
+
+      });
+    </script>
+  </head>
+  <body>
+    <h1>CartoGen</h1>
+    
+    <input id="style" type="text" />
+    <input id="number" type="text" />
+
+    <div>
+      <input id="result" style="width: 100%"></input>
+    </div>
+
+    
+
+  </body>
+</html>
