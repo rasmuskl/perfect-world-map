@@ -1,9 +1,9 @@
 {
   "bounds": [
     -180,
-    -85.05112877980659,
+    -85.0511,
     180,
-    85.05112877980659
+    85.0511
   ],
   "center": [
     0,
@@ -150,6 +150,7 @@
   ],
   "scale": 1,
   "metatile": 2,
-  "name": "x",
-  "description": ""
+  "name": "Perfect World Map",
+  "description": "",
+  "attribution": ""
 }

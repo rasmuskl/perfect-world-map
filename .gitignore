@@ -1,3 +1,11 @@
 bin
 node_modules
 .thumb.png
+app.db
+tilemill/cache
+tilemill/project/control-room
+tilemill/project/geography-class
+tilemill/project/open-streets-dc
+tilemill/project/road-trip
+*.swp
+
