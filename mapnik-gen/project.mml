@@ -1,0 +1,92 @@
+{
+  "bounds": [
+    -180,
+    -90,
+    180,
+    90
+  ],
+  "center": [
+    0,
+    0,
+    2
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=natearth",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "raster",
+      "id": "raster",
+      "class": "",
+      "Datasource": {
+        "type": "gdal",
+        "file": "reproj.tif"
+      },
+      "srs": "+proj=natearth",
+      "advanced": {},
+      "name": "raster"
+    },
+    {
+      "geometry": "polygon",
+      "Datasource": {
+        "type": "shape",
+        "file": "../data/cultural/10m_cultural/ne_10m_admin_0_countries.shp"
+      },
+      "id": "ne_10m_admin_0_countries",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "ne_10m_admin_0_countries"
+    },
+    {
+      "geometry": "polygon",
+      "Datasource": {
+        "type": "shape",
+        "file": "../data/cultural/10m_cultural/ne_10m_populated_places.shp"
+      },
+      "id": "ne_10m_populated_places",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "ne_10m_populated_places"
+    },
+    {
+      "geometry": "linestring",
+      "Datasource": {
+        "type": "shape",
+        "file": "../data/physical/ne_10m_coastline.shp"
+      },
+      "id": "ne_10m_coastline",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "coastline"
+    },
+    {
+      "geometry": "polygon",
+      "Datasource": {
+        "type": "shape",
+        "file": "../data/physical/ne_10m_geography_marine_polys.shp"
+      },
+      "id": "ne_10m_geography_marine_polys",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "ne_10m_geography_marine_polys"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "name": "Perfect World Map",
+  "description": "",
+  "attribution": ""
+}

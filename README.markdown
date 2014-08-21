@@ -1,8 +1,3 @@
-# Installing on OS X
+# Getting mapnik to work
 
-* Download TileMill.
-* Download http://postgresapp.com/ and install.
-* Run `createuser -s postgres`.
-* Run `createdb --username=postgres map` and connect using `psql --username postgres map`.
-* Run `CREATE EXTENSION postgis;`
-
+* https://gist.github.com/springmeyer/5651701

@@ -10,3 +10,7 @@ tilemill/project/road-trip
 tilemill/project/perfect-world-map/layers
 *.swp
 data
+mapnik-gen/reproj.tif
+mapnik-gen/demo.png
+mapnik-gen/map.xml
+mapnik-gen/test.xml
