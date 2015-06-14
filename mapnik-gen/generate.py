@@ -25,7 +25,7 @@ mult = 15.0
 #m = mapnik.Map(21426, 11141,"+proj=natearth")
 m = mapnik.Map(2143 * scale_factor, 1115 * scale_factor,"+proj=natearth")
 
-mapnik.load_map(m, "test.xml")
+mapnik.load_map(m, "output_map.xml")
 
 # Draw map
 m.zoom_all()
@@ -38,9 +38,11 @@ print 'envelope: ' + str(m.envelope())
 
 # Save image to files
 images_ = []
-im.save('demo.png', 'png') # true-colour RGBA
-images_.append('demo.png')
+im.save('output_demo.png', 'png') # true-colour RGBA
+images_.append('output_demo.png')
 
+
+#
 # old behavior, now can do 'png8:c=256'
 #im.save('demo256.png', 'png256') # save to palette based (max 256 colours) png
 #images_.append('demo256.png')
@@ -61,13 +63,13 @@ images_.append('demo.png')
 #images_.append('demo.tif')
 #
 ## Render cairo examples
-#if HAS_PYCAIRO_MODULE and mapnik.has_pycairo():
-#
-#    svg_surface = cairo.SVGSurface('demo.svg', m.width,m.height)
-#    mapnik.render(m, svg_surface)
-#    svg_surface.finish()
-#    images_.append('demo.svg')
-#
+# if HAS_PYCAIRO_MODULE and mapnik.has_pycairo():
+# 
+#     svg_surface = cairo.SVGSurface('demo.svg', m.width,m.height)
+#     mapnik.render(m, svg_surface)
+#     svg_surface.finish()
+#     images_.append('demo.svg')
+# 
 #    pdf_surface = cairo.PDFSurface('demo.pdf', m.width,m.height)
 #    mapnik.render(m, pdf_surface)
 #    images_.append('demo.pdf')
@@ -90,27 +92,27 @@ images_.append('demo.png')
 #    images_.append('demo_cairo_argb32.png')
 #    image_surface.finish()
 #
-#else:
-#    print '\n\nPycairo not available...',
-#    if  mapnik.has_cairo():
-#        print ' will render Cairo formats using alternative method'
+# else:
+#     print '\n\nPycairo not available...',
+#     if  mapnik.has_cairo():
+#         print ' will render Cairo formats using alternative method'
 #
 #        mapnik.render_to_file(m,'demo.pdf')
 #        images_.append('demo.pdf')
 #        mapnik.render_to_file(m,'demo.ps')
 #        images_.append('demo.ps')
-#        mapnik.render_to_file(m,'demo.svg')
-#        images_.append('demo.svg')
+#         mapnik.render_to_file(m,'demo.svg')
+#         images_.append('demo.svg')
 #        mapnik.render_to_file(m,'demo_cairo_rgb24.png','RGB24')
 #        images_.append('demo_cairo_rgb.png')
 #        mapnik.render_to_file(m,'demo_cairo_argb32.png','ARGB32')
 #        images_.append('demo_cairo_argb.png')
 #
-#print "\n\n", len(images_), "maps have been rendered in the current directory:"
+print "\n\n", len(images_), "maps have been rendered in the current directory:"
 #
 #for im_ in images_:
 #    print "-", im_
 #
 #print "\n\nHave a look!\n\n"
 #
-mapnik.save_map(m,"map.xml")
+# mapnik.save_map(m,"output/map.xml")
