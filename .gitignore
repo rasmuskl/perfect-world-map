@@ -14,3 +14,7 @@ mapnik-gen/reproj.tif
 mapnik-gen/demo.png
 mapnik-gen/map.xml
 mapnik-gen/test.xml
+
+packages
+.vs
+obj

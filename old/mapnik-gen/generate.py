@@ -19,8 +19,7 @@ except ImportError:
 # Instanciate a map, giving it a width and height. Remember: the word "map" is
 # reserved in Python! :)
 
-scale_factor = 5
-mult = 15.0
+scale_factor = 1
 
 #m = mapnik.Map(21426, 11141,"+proj=natearth")
 m = mapnik.Map(2143 * scale_factor, 1115 * scale_factor,"+proj=natearth")
@@ -32,7 +31,8 @@ m.zoom_all()
 
 # Render map
 im = mapnik.Image(m.width,m.height)
-mapnik.render(m, im, scale_factor / mult)
+#mapnik.render(m, im, scale_factor)
+mapnik.render(m, im)
 
 print 'envelope: ' + str(m.envelope())
 
@@ -63,13 +63,13 @@ images_.append('output_demo.png')
 #images_.append('demo.tif')
 #
 ## Render cairo examples
-# if HAS_PYCAIRO_MODULE and mapnik.has_pycairo():
-# 
-#     svg_surface = cairo.SVGSurface('demo.svg', m.width,m.height)
-#     mapnik.render(m, svg_surface)
-#     svg_surface.finish()
-#     images_.append('demo.svg')
-# 
+if HAS_PYCAIRO_MODULE and mapnik.has_pycairo():
+ 
+     svg_surface = cairo.SVGSurface('demo.svg', m.width,m.height)
+     mapnik.render(m, svg_surface)
+     svg_surface.finish()
+     images_.append('demo.svg')
+ 
 #    pdf_surface = cairo.PDFSurface('demo.pdf', m.width,m.height)
 #    mapnik.render(m, pdf_surface)
 #    images_.append('demo.pdf')
@@ -92,17 +92,17 @@ images_.append('output_demo.png')
 #    images_.append('demo_cairo_argb32.png')
 #    image_surface.finish()
 #
-# else:
-#     print '\n\nPycairo not available...',
-#     if  mapnik.has_cairo():
-#         print ' will render Cairo formats using alternative method'
-#
+else:
+     print '\n\nPycairo not available...',
+     if  mapnik.has_cairo():
+         print ' will render Cairo formats using alternative method'
+
 #        mapnik.render_to_file(m,'demo.pdf')
 #        images_.append('demo.pdf')
 #        mapnik.render_to_file(m,'demo.ps')
 #        images_.append('demo.ps')
-#         mapnik.render_to_file(m,'demo.svg')
-#         images_.append('demo.svg')
+         mapnik.render_to_file(m,'demo.svg')
+         images_.append('demo.svg')
 #        mapnik.render_to_file(m,'demo_cairo_rgb24.png','RGB24')
 #        images_.append('demo_cairo_rgb.png')
 #        mapnik.render_to_file(m,'demo_cairo_argb32.png','ARGB32')
