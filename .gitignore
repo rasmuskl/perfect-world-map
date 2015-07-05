@@ -9,7 +9,7 @@ tilemill/project/open-streets-dc
 tilemill/project/road-trip
 tilemill/project/perfect-world-map/layers
 *.swp
-data
+raw
 mapnik-gen/reproj.tif
 mapnik-gen/demo.png
 mapnik-gen/map.xml

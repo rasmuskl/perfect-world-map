@@ -10,4 +10,5 @@ Potential projections:
 
 List of projections: [https://en.wikipedia.org/wiki/List_of_map_projections]
 
+Reprojecting layers in QGIS: [http://gis.stackexchange.com/questions/43848/how-to-re-project-shapefiles]
 
